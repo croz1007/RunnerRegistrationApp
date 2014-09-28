@@ -1,0 +1,57 @@
+%h1 Myers Running Camp Registration
+.formContainer
+  %h4 Runners Form
+  %hr/
+  %p We appologize for the long form, but it allows us to collect everything we need for your registration. This way, the only thing you will be emailed before camp will be the instructions and directions to get to camp and what to bring! Thank you.
+  %p.italic.note * Indicates Required Filed
+  = form_for @runner do |f|
+    First name: #{f.text_field :firstname, placeholder: '*required'}
+    %br/
+    Last name: #{f.text_field :lastname, placeholder: '*required'}
+    %br/
+    Address 1: #{f.text_field :address1, placeholder: '*required'}
+    %br/
+    Address 2: #{f.text_field :address2}
+    %br/
+    City: #{f.text_field :city, placeholder: '*required'}
+    %br/
+    State: #{f.select :state, us_states, placeholder: '*required'}
+    %br/
+    ZIP: #{f.text_field :zip, placeholder: '*required'}
+    %br/
+    Phone: #{f.telephone_field :phone}
+    %br/
+    School Name: #{f.text_field :school}
+    %br/
+    Gender: #{f.text_field :gender, placeholder: '*required'}
+    %br/
+    Age: #{f.text_field :age, placeholder: '*required'}
+    %br/
+    = f.submit
+- if !@runners.blank?
+  #runnerList
+    %h4 Current Runners
+    %hr/
+    - @runners.each_with_index do |r, index|
+      .runnerBlock
+        %strong= link_to runner_name(r.firstname, r.lastname), runner_path(id: r.id)
+        %hr/
+        = r.address1
+        %br/
+        - if !r.address2.blank?
+          = r.address2
+          %br/
+        = r.city
+        = r.state
+        = r.zip
+        %br/
+        - if !r.phone.blank?
+          = r.phone
+          %br/
+        = r.school
+        %br/
+        Gender: #{r.gender}
+        %br/
+        Age: #{r.age}
+      - if index+1 != @runners.size
+        %hr/

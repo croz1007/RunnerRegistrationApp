@@ -1,0 +1,123 @@
+/*// Place all the styles related to the runners controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+*/
+body {
+  background: #CCC;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+#page-wrap {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  background: white;
+  margin: 0 auto;
+  padding: 10px;
+  overflow: auto;
+}
+
+.formContainer {
+  border: 1px solid black;
+  padding: 5px;
+  width: 48%;
+  float: left;
+}
+
+#runnerList {
+  border: 1px solid black;
+  padding: 5px;
+  width: 48%;
+  float: right;
+}
+
+.runnerBlock{
+  width: 94%;
+  border-radius: 7px;
+  background: #EEE;
+  border: 1px solid #AAA;
+  padding: 4px 8px;
+  margin: 0 0 4px;
+  overflow: auto;
+}
+
+.runnerData {
+  float: left;
+  margin-bottom: 45px;
+}
+
+.map_canvas {
+  width: 70%;
+  height: 200px;
+  background-color: #CCC;
+  float: right;
+  border: 1px solid #888;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.note {
+  font-size: .75rem;
+}
+
+form {
+  background-color:#FFFFFF;
+  background-position:initial initial;
+  background-repeat:initial initial;
+  color:#000000;
+  margin:0;
+  max-width:100%;
+  min-width:150px;
+  padding-left:5px;
+  padding-right:5px;
+  padding-top:20px;
+}
+
+input {
+  background-color:#FFFFFF;
+  background-position:initial initial;
+  background-repeat:initial initial;
+  border:2px solid #CECECE;
+  color:#000000;
+  font-size:12px;
+  height:23px;
+  margin-bottom:5px;
+  min-width:100px;
+  padding:1px;
+  width:98%;
+}
+input:focus {
+  border:2px solid #CECECE;
+}
+
+input[type="date"], input[type="number"], input[type="submit"], input[type="image"] {
+  width:auto;
+}
+
+input[type="submit"] {
+  background-color:#880000;
+  background-position:initial initial;
+  background-repeat:initial initial;
+  border:1px solid #000000;
+  color:#FFFFFF;
+  display:inline-block;
+  font-family:Helvetica, Arial, sans-serif;
+  font-size:15px;
+  font-weight:bold;
+  margin-left:5px;
+  margin-top:5px;
+  padding:3px;
+  text-decoration:none;
+  border-radius: 5px;
+  padding: 2px 6px;
+}
+
+#delete
+{
+  clear:left;
+}

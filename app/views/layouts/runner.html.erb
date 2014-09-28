@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Runner Registration App</title>
+  <%= stylesheet_link_tag    'runners', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="https://developers.google.com/maps/documentation/javascript/sexamples/default.css" />
+  <script src="https://maps.googleapis.com/maps/api/js?v=3&sensor=false"></script>
+
+  <%= javascript_include_tag 'runners', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="page-wrap">
+
+<%= yield %>
+
+</div>
+</body>
+</html>
