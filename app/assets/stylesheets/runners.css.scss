@@ -12,25 +12,33 @@ h1, h2, h3, h4 {
 
 #page-wrap {
   position: relative;
-  width: 90%;
+  width: 100%;
+  width: calc(100% - 120px);
   height: 100%;
   background: white;
-  margin: 0 auto;
+  border-left: 1px solid #BBB;
+  border-right: 1px solid #BBB;
+  margin: -15px auto;
   padding: 10px;
+  box-shadow: 0 0 15px 10px rgba(0,0,0,.25);
   overflow: auto;
 }
 
 .formContainer {
   border: 1px solid black;
-  padding: 5px;
+  margin: 10px 0;
+  padding: 10px;
   width: 48%;
+  border-radius: 10px;
   float: left;
 }
 
 #runnerList {
   border: 1px solid black;
+  margin: 10px 0;
   padding: 5px;
   width: 48%;
+  border-radius: 10px;
   float: right;
 }
 

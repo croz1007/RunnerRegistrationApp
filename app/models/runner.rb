@@ -7,6 +7,7 @@ class Runner < ActiveRecord::Base
   validates :state, presence: true
   validates :zip, presence: true
   validates :gender, presence: true
-  validates :age, presence: true
+  validates :age, presence: true,
+                  numericality: { only_integer: true }
 
 end

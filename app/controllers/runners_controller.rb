@@ -4,10 +4,11 @@ class RunnersController < ApplicationController
   layout "runner"
 
   def index
-
+    @title = "- Home"
   end
 
   def new
+    @title = "- Add a Runner"
     @runners = Runner.all
   end
 
@@ -20,6 +21,7 @@ class RunnersController < ApplicationController
 
   def show
     @runner = Runner.find(params[:id])
+    @title = "- " + @runner['firstname'] + ' ' + @runner['lastname']
   end
 
   def destroy

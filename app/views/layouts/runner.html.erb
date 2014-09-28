@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Runner Registration App</title>
+<title>Race Management <%= @title %></title>
   <%= stylesheet_link_tag    'runners', media: 'all', 'data-turbolinks-track' => true %>
   <link rel="stylesheet" href="https://developers.google.com/maps/documentation/javascript/sexamples/default.css" />
   <script src="https://maps.googleapis.com/maps/api/js?v=3&sensor=false"></script>
@@ -10,10 +10,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div id="page-wrap">
+  <div id="page-wrap">
 
-<%= yield %>
+    <%= yield %>
 
-</div>
+  </div>
 </body>
 </html>
